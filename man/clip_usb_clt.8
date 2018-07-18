@@ -1,0 +1,89 @@
+.TH CLIP_USB_CLT 8 "DECEMBER 2008" Linux "CLIP Utilities"
+.SH NAME
+clip-usb-client \- Clip usb client.
+.SH SYNOPSIS
+.B usbclt_<level>
+.I action
+.PP
+.B usbmenu
+.PP
+.SH DESCRIPTION
+.B usbclt 
+is launched in a given CLIP jail and communicates with the 
+.I usbadmin
+daemon listening in that jail. It sends commands to that daemon
+based on the 
+.I action
+parameter, to manage removable mass-storage tokens (USB, CD-ROM), for
+the specified jail. The affected jail is determined by the name under which
+the executable is called. A symlink to
+.B usbclt
+named 
+.B
+usbclt_<level>
+will perform operations for the <level> jail. (Note however that all
+CLIP jails are treated as a single <level> : 'clip').
+.PP
+.B usbmenu
+is a GTK-based graphical interface to 
+.I usbclt
+at the CLIP security level (ADMIN, AUDIT and USER jails).
+.PP
+.SH MANDATORY PARAMETERS
+.I action
+can have the following values :
+.PP
+\-
+.BR umount
+unmounts the currently mounted usb token.
+.PP
+\-
+.BR init
+initializes the last non-mounted usb token as a signed and encrypted
+token for the current user and the specified jail.
+.PP
+\-
+.BR init-cleartext
+initializes the last non-mounted usb token as a signed but non encrypted
+token for the current user and the specified jail.
+.PP
+\-
+.BR generate
+generates new crypto keys to sign and encrypt USB tokens for the current user
+and specified jail.
+.PP
+\-
+.BR export
+exports the crypto keys for the current user and specified jail to 
+the last non-mounted USB token.
+.PP
+\-
+.BR cdmount
+mounts the CDROM into the specified jail.
+.PP
+\-
+.BR cdumount
+unmounts the CDROM mounted in the specified jail.
+.PP
+\-
+.BR ucdmount
+mounts the CDROM into the UPDATE jail (only works when the caller is at CLIP level,
+and a member of the update management group defined by usbadmin_clip's command line).
+.PP
+\-
+.BR ucdumount
+unmounts the CDROM mounted in the UPDATE jail (only works when the caller is at CLIP level,
+and a member of the update management group defined by usbadmin_clip's command line).
+.PP
+
+.SH DIAGNOSTICS
+.B usbclt
+returns -1 if an error occured, 0 otherwise.
+.SH AUTHORS
+EADS Defence And Security Systems
+.PP
+SGDN/DCSSI ( Vincent Strubel - 
+.I clipos@ssi.gouv.fr
+)
+.SH SEE ALSO
+.BR clip_usb_keys (8)

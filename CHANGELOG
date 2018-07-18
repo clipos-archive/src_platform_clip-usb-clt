@@ -1,0 +1,97 @@
+# CLIP ChangeLog for app-clip/clip-usb-clt
+
+*clip-usb-clt-2.3.0 (29 Feb 2016)
+
+  29 Feb 2016; ANSSI <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.3.0.ebuild, -clip-usb-clt-2.2.1.ebuild:
+  Remove useless dependencies to gtk and libxml.
+
+*clip-usb-clt-2.2.1 (04 Feb 2014)
+
+  04 Feb 2014; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.2.1.ebuild, -clip-usb-clt-2.2.0.ebuild:
+  Add support for the 'import' command in clip-usb-keys-2.10.0.
+
+*clip-usb-clt-2.2.0 (21 Feb 2013)
+
+  21 Feb 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.2.0.ebuild, -clip-usb-clt-2.1.5.ebuild:
+  Do not pass a level when running an init/generate/export command.
+
+*clip-usb-clt-2.1.5 (10 Jul 2012)
+
+  10 Jul 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.1.5.ebuild, -clip-usb-clt-2.1.4.ebuild:
+  Support usbclt mount command.
+
+  07 Jun 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  clip-usb-clt-2.1.4.ebuild:
+  Fix IUSE.
+
+*clip-usb-clt-2.1.4 (20 Jul 2009)
+
+  20 Jul 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.1.4.ebuild, -clip-usb-clt-2.1.3.ebuild:
+  Remove multiple symlinks for different levels. The level can
+  now be passed to usbclt as a second argument, when needed.
+  Remove obsolete UPDATE CD-ROM actions. Needs clip-usb-keys-2.4.5.
+
+*clip-usb-clt-2.1.3 (03 Jul 2009)
+
+  03 Jul 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.1.3.ebuild, -clip-usb-clt-2.1.2.ebuild:
+  Support new USB 'clear' command.
+
+*clip-usb-clt-2.1.2 (23 Dec 2008)
+
+  23 Dec 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.1.2.ebuild, -clip-usb-clt-2.1.1.ebuild:
+  Add online help.
+
+*clip-usb-clt-2.1.1 (18 Dec 2008)
+
+  18 Dec 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.1.1.ebuild, -clip-usb-clt-2.1.0.ebuild:
+  Add support for mounting UPDATE CD-ROM as core_admin.
+
+*clip-usb-clt-2.1.0 (17 Dec 2008)
+
+  17 Dec 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.1.0.ebuild, -clip-usb-clt-2.0.ebuild:
+  Support new CD-ROM functionalities from clip-usb-keys-2.1.
+  Update man page.
+  Add tooltips on usbmenu buttons.
+
+*clip-usb-clt-2.0 (15 Dec 2008)
+
+  15 Dec 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-2.0.ebuild, -clip-usb-clt-1.3.ebuild:
+  First release of clip-usb-clt ng.
+  Add new 'unencrypted' initialization (#486).
+  Remove useless 'mount' function (#487)"
+
+*clip-usb-clt-1.3 (14 Apr 2008)
+
+  14 Apr 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-1.3.ebuild, -clip-usb-clt-1.2.ebuild:
+  Add support for 'export' and 'generate' commands.
+
+*clip-usb-clt-1.2 (11 Apr 2008)
+
+  11 Apr 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-1.2.ebuild, -clip-usb-clt-1.1-r1.ebuild:
+  Re-add a different usbmenu, for use in AUDITclip / ADMINclip.
+
+*clip-usb-clt-1.1 (11 Apr 2008)
+
+  11 Apr 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-usb-clt-1.1.ebuild, -clip-usb-clt-1.0.ebuild:
+  Add support for CLIP usb keys. usbclt is rewritten to 
+  be compiled only once, but be called through different symlinks
+  to support different levels. usbmenu is removed for now.
+
+*clip-usb-clt-1.0 (23 Aug 2007)
+
+  23 Aug 2007; EADS D&S <clipos@ssi.gouv.fr>
+  +clip-usb-clt-1.0.ebuild:
+  Initial import.
